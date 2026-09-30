@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed-variant":"#594311","on-primary-container":"#004e48","tertiary-fixed-dim":"#b4c5ff","outline":"#859491","on-secondary":"#402d00","on-tertiary-container":"#003ca4","surface-bright":"#353944","inverse-surface":"#dfe2f1","on-secondary-container":"#d3b478","secondary-container":"#5c4613","error":"#ffb4ab","on-background":"#dfe2f1","error-container":"#93000a","on-error-container":"#ffdad6","surface":"#0f131d","secondary":"#e2c384","surface-dim":"#0f131d","primary-fixed-dim":"#3bdccd","on-tertiary-fixed-variant":"#003ea8","surface-tint":"#3bdccd","outline-variant":"#3c4a47","tertiary":"#bfcdff","surface-container-highest":"#313540","surface-variant":"#313540","surface-container-lowest":"#0a0e18","on-secondary-fixed":"#261a00","on-primary-fixed-variant":"#005049","secondary-fixed-dim":"#e2c384","surface-container":"#1c1f2a","primary":"#47e4d5","primary-container":"#0ac8b9","on-surface-variant":"#bacac6","tertiary-container":"#97b0ff","on-primary":"#003732","surface-container-low":"#171b26","inverse-primary":"#006a62","on-primary-fixed":"#00201d","tertiary-fixed":"#dbe1ff","surface-container-high":"#262a35","on-tertiary":"#002a78","on-tertiary-fixed":"#00174b","on-surface":"#dfe2f1","inverse-on-surface":"#2c303b","background":"#0f131d","primary-fixed":"#61f9e9","secondary-fixed":"#ffdfa0","on-error":"#690005"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.25rem","margin-tablet":"2rem","space-xs":"0.25rem","margin":"1rem","space-lg":"1.5rem","space-md":"1rem","gutter-desktop":"1.75rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-desktop":"3rem"},"fontFamily":{"display-hero":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"data-mono-lg":["JetBrains Mono"],"badge-label":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"body-lg":["Inter"],"title-team":["Space Grotesk"],"headline-md":["Space Grotesk"],"data-mono":["JetBrains Mono"],"body-sm":["Inter"],"body-md":["Inter"]},"fontSize":{"display-hero":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"data-mono-lg":["20px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"700"}],"badge-label":["11px",{"lineHeight":"14px","letterSpacing":"0.1em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"display-hero-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"title-team":["16px",{"lineHeight":"22px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono":["14px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen selection:bg-primary/20 selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-20 w-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><div class="absolute -inset-1 rounded-full bg-primary/20 blur-sm"></div><span class="relative flex h-9 w-9 items-center justify-center rounded-xl bg-surface-container-high border border-primary/40 text-primary shadow-[0_0_12px_rgba(71,228,213,0.3)]"><span class="material-symbols-outlined text-xl">sports_esports</span></span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface font-bold">내전<span class="text-primary">LOG</span></span><span class="font-badge-label text-badge-label uppercase text-on-surface-variant tracking-widest">Scrim Tracker</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-badge-label text-badge-label uppercase text-on-surface-variant font-medium tracking-wider">리그오브레전드 내전 전적 관리</span></div></div><nav class="hidden md:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-lowest border border-outline-variant" data-active-classes="bg-surface-container-high text-primary border border-primary/30 shadow-[0_0_12px_rgba(10,200,185,0.2)] rounded-lg"><a aria-current="page" class="px-space-md py-space-sm font-headline-sm transition-all bg-surface-container-high text-primary border border-primary/30 shadow-[0_0_12px_rgba(10,200,185,0.2)] rounded-lg" data-path="home" href="#">홈</a><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="game-list" href="#">게임 목록</a><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="record-game" href="#">게임 전적 등록</a><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="players" href="#">플레이어 관리</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center gap-space-md px-space-md py-space-xs rounded-xl bg-surface-container-low border border-outline-variant"><div class="flex flex-col text-right"><span class="font-badge-label text-badge-label uppercase text-on-surface-variant">등록된 플레이어</span><span class="font-data-mono text-data-mono text-primary font-bold">14명</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex flex-col text-right"><span class="font-badge-label text-badge-label uppercase text-on-surface-variant">총 진행 경기</span><span class="font-data-mono text-data-mono text-secondary font-bold">28회</span></div></div><a class="relative group overflow-hidden px-space-md py-space-sm rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-bold tracking-wide shadow-[0_0_16px_rgba(10,200,185,0.35)] hover:shadow-[0_0_24px_rgba(71,228,213,0.6)] transition-all flex items-center gap-space-xs shrink-0" data-path="record-game" href="#"><span class="material-symbols-outlined text-lg">add_circle</span><span>+ 전적 등록</span></a><div class="flex items-center gap-space-sm pl-space-xs border-l border-outline-variant"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida/AEtjO1XCTfCQlJHgSuPHlMlMP722AkjFNfXp-SWUHxlzOy-BostPakKWeqeQviAuitj0m5m3Cwtb8pR1Cq-gbzCn5rqUxIu7qn_qVceUZMyjaqbK1UrVLqsER-iV3lc898FF21nzDaNf4F40XDy2bWcMM1aSmTukyFO9eaPEWIg7DcEkn_a2H-D64Wqc129wX8xCcDXdUr9muq1LJ3-9zhbQNJW5NB_s_kpfeYKQKojvjnEFSOmUpFDYFVY4K2PA"/></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-gutter-desktop py-space-xl flex flex-col gap-space-xl relative overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 right-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-badge-label text-badge-label uppercase text-primary tracking-widest bg-surface-container-high px-space-sm py-0.5 rounded">TELEMETRY DECK</span>
+<span class="text-on-surface-variant text-body-sm font-data-mono">SCRIM_CYCLE_2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">내전 종합 대시보드</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">공식 리그 규정 5:5 내전 전적 현황 및 정산 통계를 실시간으로 집계합니다.</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded-xl shadow-inner">
+<button class="px-space-md py-space-xs rounded-lg font-headline-sm text-body-sm transition-all bg-surface-container-high text-primary shadow-sm flex items-center gap-space-xs" id="view-mode-data">
+<span class="material-symbols-outlined text-base">analytics</span>
+<span>진행 데이터 뷰</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg font-headline-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-space-xs" id="view-mode-empty">
+<span class="material-symbols-outlined text-base">inbox</span>
+<span>신규 리그 빈 상태 프리뷰</span>
+</button>
+</div>
+</section>
+<div class="flex flex-col gap-space-xl transition-opacity duration-300" id="dashboard-content-live">
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="relative bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col justify-between overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 text-surface-container-highest/20 select-none pointer-events-none">
+<span class="material-symbols-outlined text-8xl">sports_esports</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-badge-label text-badge-label uppercase tracking-widest text-on-surface-variant">총 진행 경기</span>
+<span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<div class="my-space-md flex items-baseline gap-space-xs">
+<span class="font-display-hero text-display-hero text-on-surface">28</span>
+<span class="font-data-mono text-body-md text-primary font-bold">회</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant font-data-mono pt-space-xs bg-surface-container-low px-space-sm py-1 rounded">
+<span>공식 검증 완료</span>
+<span class="text-primary font-bold">100%</span>
+</div>
+</div>
+<div class="relative bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col justify-between overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 text-surface-container-highest/20 select-none pointer-events-none">
+<span class="material-symbols-outlined text-8xl">monetization_on</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-badge-label text-badge-label uppercase tracking-widest text-on-surface-variant">누적 총 판돈</span>
+<span class="material-symbols-outlined text-secondary text-lg">paid</span>
+</div>
+<div class="my-space-md flex flex-col">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-data-mono-lg text-headline-lg text-secondary font-bold">₩280,000</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-data-mono">1인당 평균 ₩10,000</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant font-data-mono pt-space-xs bg-surface-container-low px-space-sm py-1 rounded">
+<span>정산 완료율</span>
+<span class="text-secondary font-bold">28/28 SET</span>
+</div>
+</div>
+<div class="relative bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col justify-between overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 text-surface-container-highest/20 select-none pointer-events-none">
+<span class="material-symbols-outlined text-8xl">groups</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-badge-label text-badge-label uppercase tracking-widest text-on-surface-variant">등록된 플레이어</span>
+<span class="material-symbols-outlined text-tertiary text-lg">badge</span>
+</div>
+<div class="my-space-md flex items-baseline gap-space-xs">
+<span class="font-display-hero text-display-hero text-on-surface">14</span>
+<span class="font-data-mono text-body-md text-tertiary font-bold">명</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant font-data-mono pt-space-xs bg-surface-container-low px-space-sm py-1 rounded">
+<span>출전 로스터 풀</span>
+<span class="text-tertiary font-bold">READY</span>
+</div>
+</div>
+<div class="relative bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col justify-between overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-badge-label text-badge-label uppercase tracking-widest text-on-surface-variant">진영별 승률 요약</span>
+<span class="font-data-mono text-body-sm text-on-surface-variant">28전</span>
+</div>
+<div class="flex flex-col gap-space-sm my-space-xs">
+<div class="flex justify-between items-end font-data-mono text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-primary"></span>
+<span class="text-primary font-bold">BLUE 15승</span>
+<span class="text-on-surface-variant text-body-sm">(53.6%)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant text-body-sm">(46.4%)</span>
+<span class="text-error font-bold">RED 13승</span>
+<span class="h-2 w-2 rounded-full bg-error"></span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-lowest overflow-hidden flex">
+<div class="h-full bg-gradient-to-r from-primary-container to-primary transition-all duration-1000 shadow-[0_0_8px_rgba(71,228,213,0.5)]" style="width: 53.6%;"></div>
+<div class="h-full bg-gradient-to-r from-error to-error-container transition-all duration-1000 shadow-[0_0_8px_rgba(255,180,171,0.5)]" style="width: 46.4%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono text-on-surface-variant bg-surface-container-low px-space-sm py-1 rounded">
+<span>블루 우세 마진</span>
+<span class="text-primary font-bold">+2 WIN DIFF</span>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<a class="relative group bg-surface-container hover:bg-surface-container-high transition-all p-space-lg rounded-xl shadow-md flex items-center justify-between overflow-hidden" data-path="record-game" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
+<span class="material-symbols-outlined text-2xl">add_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">전적 등록</span>
+<span class="font-badge-label text-badge-label bg-primary/20 text-primary px-space-xs rounded uppercase">ACTION</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">새로운 내전 승패 및 10인 슬롯 결과 기록</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+</a>
+<a class="relative group bg-surface-container hover:bg-surface-container-high transition-all p-space-lg rounded-xl shadow-md flex items-center justify-between overflow-hidden" data-path="players" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
+<span class="material-symbols-outlined text-2xl">person_add</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">플레이어 관리</span>
+<span class="font-badge-label text-badge-label bg-tertiary/20 text-tertiary px-space-xs rounded uppercase">ROSTER</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">신규 내전 소환사 등록 및 정보 관리</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary group-hover:translate-x-1 transition-all">chevron_right</span>
+</a>
+<a class="relative group bg-surface-container hover:bg-surface-container-high transition-all p-space-lg rounded-xl shadow-md flex items-center justify-between overflow-hidden" data-path="game-list" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
+<span class="material-symbols-outlined text-2xl">format_list_bulleted</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">전체 경기 보기</span>
+<span class="font-badge-label text-badge-label bg-secondary/20 text-secondary px-space-xs rounded uppercase">ARCHIVE</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">누적 28회의 모든 내전 상세 이력 조회</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary group-hover:translate-x-1 transition-all">chevron_right</span>
+</a>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">history_toggle_off</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">최근 경기 전적</h2>
+<span class="font-badge-label text-badge-label bg-surface-container-high px-space-sm py-0.5 rounded text-on-surface-variant uppercase">LATEST 3 MATCHES</span>
+</div>
+<a class="font-headline-sm text-body-sm text-primary hover:underline flex items-center gap-space-xs" data-path="game-list" href="#">
+<span>더 보기</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col gap-space-md hover:bg-surface-container-high/90 transition-all">
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono text-body-md text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+                    2025.02.24 21:30
+                  </span>
+<span class="px-space-sm py-0.5 rounded font-badge-label text-badge-label uppercase font-bold bg-primary/20 text-primary">BLUE WIN</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1 rounded">
+<span class="font-badge-label text-badge-label text-on-surface-variant">1인당 판돈</span>
+<span class="font-data-mono text-body-md font-bold text-secondary">₩10,000</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-11 gap-space-sm items-center">
+<div class="md:col-span-5 bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-team text-title-team text-primary font-bold flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-primary"></span> BLUE TEAM
+                    </span>
+<span class="font-badge-label text-badge-label text-primary uppercase">승리 진영</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 01</span>
+<span class="text-on-surface font-medium">페이커선생</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 02</span>
+<span class="text-on-surface font-medium">마포고협곡러</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 03</span>
+<span class="text-on-surface font-medium">정글은차이</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 04</span>
+<span class="text-on-surface font-medium">바텀오더장인</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 05</span>
+<span class="text-on-surface font-medium">서폿와드머신</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 flex md:flex-col items-center justify-center gap-1 py-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-bold">VS</span>
+<div class="hidden md:block w-px h-16 bg-surface-container-highest"></div>
+</div>
+<div class="md:col-span-5 bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs opacity-85">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-team text-title-team text-error font-bold flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-error"></span> RED TEAM
+                    </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">패배</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 01</span>
+<span class="text-on-surface font-medium">협곡의지배자</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 02</span>
+<span class="text-on-surface font-medium">탑솔의눈물</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 03</span>
+<span class="text-on-surface font-medium">갱안가요수고</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 04</span>
+<span class="text-on-surface font-medium">원딜탓금지</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 05</span>
+<span class="text-on-surface font-medium">알리스타원챔</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-end pt-space-xs">
+<a class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm flex items-center gap-space-xs transition-colors" data-path="game-detail" href="#">
+<span>게임 상세 결과 보기</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col gap-space-md hover:bg-surface-container-high/90 transition-all">
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono text-body-md text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+                    2025.02.24 20:15
+                  </span>
+<span class="px-space-sm py-0.5 rounded font-badge-label text-badge-label uppercase font-bold bg-error/20 text-error">RED WIN</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1 rounded">
+<span class="font-badge-label text-badge-label text-on-surface-variant">1인당 판돈</span>
+<span class="font-data-mono text-body-md font-bold text-secondary">₩10,000</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-11 gap-space-sm items-center">
+<div class="md:col-span-5 bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs opacity-85">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-team text-title-team text-primary font-bold flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-primary"></span> BLUE TEAM
+                    </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">패배</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 01</span>
+<span class="text-on-surface font-medium">협곡의지배자</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 02</span>
+<span class="text-on-surface font-medium">강남미드러너</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 03</span>
+<span class="text-on-surface font-medium">정글은차이</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 04</span>
+<span class="text-on-surface font-medium">바텀오더장인</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 05</span>
+<span class="text-on-surface font-medium">서폿와드머신</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 flex md:flex-col items-center justify-center gap-1 py-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-bold">VS</span>
+<div class="hidden md:block w-px h-16 bg-surface-container-highest"></div>
+</div>
+<div class="md:col-span-5 bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-team text-title-team text-error font-bold flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-error"></span> RED TEAM
+                    </span>
+<span class="font-badge-label text-badge-label text-error uppercase">승리 진영</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 01</span>
+<span class="text-on-surface font-medium">페이커선생</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 02</span>
+<span class="text-on-surface font-medium">탑솔의눈물</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 03</span>
+<span class="text-on-surface font-medium">갱안가요수고</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 04</span>
+<span class="text-on-surface font-medium">원딜탓금지</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 05</span>
+<span class="text-on-surface font-medium">신림동그랩왕</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-end pt-space-xs">
+<a class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm flex items-center gap-space-xs transition-colors" data-path="game-detail" href="#">
+<span>게임 상세 결과 보기</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col gap-space-md hover:bg-surface-container-high/90 transition-all">
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono text-body-md text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+                    2025.02.23 22:40
+                  </span>
+<span class="px-space-sm py-0.5 rounded font-badge-label text-badge-label uppercase font-bold bg-primary/20 text-primary">BLUE WIN</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1 rounded">
+<span class="font-badge-label text-badge-label text-on-surface-variant">1인당 판돈</span>
+<span class="font-data-mono text-body-md font-bold text-secondary">₩10,000</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-11 gap-space-sm items-center">
+<div class="md:col-span-5 bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-team text-title-team text-primary font-bold flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-primary"></span> BLUE TEAM
+                    </span>
+<span class="font-badge-label text-badge-label text-primary uppercase">승리 진영</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 01</span>
+<span class="text-on-surface font-medium">강남미드러너</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 02</span>
+<span class="text-on-surface font-medium">마포고협곡러</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 03</span>
+<span class="text-on-surface font-medium">협곡피지컬</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 04</span>
+<span class="text-on-surface font-medium">바텀오더장인</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-primary font-bold">SLOT 05</span>
+<span class="text-on-surface font-medium">신림동그랩왕</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 flex md:flex-col items-center justify-center gap-1 py-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-bold">VS</span>
+<div class="hidden md:block w-px h-16 bg-surface-container-highest"></div>
+</div>
+<div class="md:col-span-5 bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs opacity-85">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-team text-title-team text-error font-bold flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-error"></span> RED TEAM
+                    </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">패배</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 01</span>
+<span class="text-on-surface font-medium">페이커선생</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 02</span>
+<span class="text-on-surface font-medium">탑솔의눈물</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 03</span>
+<span class="text-on-surface font-medium">정글은차이</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 04</span>
+<span class="text-on-surface font-medium">원딜탓금지</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono bg-surface-container-lowest/80 px-space-sm py-1 rounded">
+<span class="text-error font-bold">SLOT 05</span>
+<span class="text-on-surface font-medium">알리스타원챔</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-end pt-space-xs">
+<a class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm flex items-center gap-space-xs transition-colors" data-path="game-detail" href="#">
+<span>게임 상세 결과 보기</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">내전 스테이지 현황</span>
+<span class="font-badge-label text-badge-label uppercase text-primary bg-primary/10 px-space-xs py-0.5 rounded">STATUS</span>
+</div>
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="High tech esports stage with glowing cyan and crimson neon lighting, holographic tournament battle logos, dark steel telemetry screens in an arena, 3D broadcast style, ultra sharp, cinematic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQC4nl-yWBVsykWk1VtM4gjNtMTDi_NRrqCWqg5xAUSUvZbvxjhXNUJ-M_iblqBoxpZCH97QWpfTjykq-tbwGAy8EA2ZlGyEgthtKCfkzpEIVTpwudW5t7U3Ere5piAL6q8doWrwL473Tl97ftm_dS435lESsRMb3NpEjX-GKJpTNofqyl5Im4yRShLGZIAKdD2nNwZ9FgVi62EnllqH-Q_Vg3pf7rZ1RxBQjYweix2vKLDrLOZ-O9HQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/50 to-transparent flex flex-col justify-end p-space-md">
+<span class="font-badge-label text-badge-label text-secondary uppercase tracking-wider">OFFICIAL CIRCUIT</span>
+<span class="font-headline-sm text-body-md font-bold text-on-surface">정규 시즌 5:5 자유 교차전</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm font-data-mono text-body-sm">
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span class="text-on-surface-variant">경기 규칙</span>
+<span class="text-on-surface font-bold">소환사의 협곡 5:5 토너먼트 드래프트</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span class="text-on-surface-variant">고정 기본 판돈</span>
+<span class="text-secondary font-bold">인당 ₩10,000</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span class="text-on-surface-variant">승자 독식 판돈 총액</span>
+<span class="text-secondary font-bold">매 경기 ₩100,000</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-xl">help_outline</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">간편 운영 가이드</h3>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+<span>경기 전 <strong class="text-on-surface">'플레이어 관리'</strong>에서 10명의 소환사를 먼저 확인하거나 등록합니다.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+<span>경기가 종료되면 <strong class="text-on-surface">'전적 등록'</strong> 버튼을 눌러 승리 진영과 슬롯별 참가자를 기입합니다.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+<span>판돈 정산 통계는 등록 즉시 모든 플레이어의 누적 전적에 반영됩니다.</span>
+</li>
+</ul>
+<div class="pt-space-xs">
+<a class="w-full py-space-sm rounded-lg bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-body-sm font-bold flex items-center justify-center gap-space-xs shadow-md hover:shadow-lg transition-all" data-path="record-game" href="#">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+<span>새 경기 결과 입력하기</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden flex-col gap-space-xl transition-opacity duration-300" id="dashboard-content-empty">
+<div class="bg-surface-container p-space-xl rounded-2xl shadow-xl flex flex-col items-center justify-center text-center py-20 relative overflow-hidden">
+<div class="w-24 h-24 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-space-lg shadow-inner">
+<span class="material-symbols-outlined text-5xl">sports_esports</span>
+</div>
+<span class="font-badge-label text-badge-label uppercase tracking-widest text-primary mb-space-xs bg-surface-container-high px-space-sm py-1 rounded">SEASON RESTART</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-sm">아직 기록된 경기가 없습니다</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-xl">
+          새로운 내전 리그를 시작하고 첫 번째 승패를 공식 기록으로 보관하세요.<br/>
+          10명의 플레이어 슬롯과 판돈을 확정하고 전적을 등록할 수 있습니다.
+        </p>
+<div class="flex flex-col sm:flex-row items-center gap-space-md">
+<a class="px-space-xl py-space-md rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-headline-sm font-bold tracking-wide shadow-lg hover:scale-105 transition-all flex items-center gap-space-sm" data-path="record-game" href="#">
+<span class="material-symbols-outlined text-2xl">add_circle</span>
+<span>첫 경기 전적 등록하기</span>
+</a>
+<a class="px-space-lg py-space-md rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-md transition-all flex items-center gap-space-xs" data-path="players" href="#">
+<span class="material-symbols-outlined text-xl">group_add</span>
+<span>플레이어 먼저 등록</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initDashboard() {
+    const btnData = document.getElementById('view-mode-data');
+    const btnEmpty = document.getElementById('view-mode-empty');
+    const liveView = document.getElementById('dashboard-content-live');
+    const emptyView = document.getElementById('dashboard-content-empty');
+
+    if (!btnData || !btnEmpty || !liveView || !emptyView) return;
+
+    btnData.addEventListener('click', function() {
+      liveView.classList.remove('hidden');
+      emptyView.classList.add('hidden');
+
+      btnData.className = 'px-space-md py-space-xs rounded-lg font-headline-sm text-body-sm transition-all bg-surface-container-high text-primary shadow-sm flex items-center gap-space-xs';
+      btnEmpty.className = 'px-space-md py-space-xs rounded-lg font-headline-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-space-xs';
+    });
+
+    btnEmpty.addEventListener('click', function() {
+      liveView.classList.add('hidden');
+      emptyView.classList.remove('hidden');
+
+      btnEmpty.className = 'px-space-md py-space-xs rounded-lg font-headline-sm text-body-sm transition-all bg-surface-container-high text-primary shadow-sm flex items-center gap-space-xs';
+      btnData.className = 'px-space-md py-space-xs rounded-lg font-headline-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-space-xs';
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant py-space-lg"><div class="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-body-md text-on-surface font-semibold">내전<span class="text-primary">LOG</span></span><span class="text-on-surface-variant font-data-mono text-body-sm">© 2024 Scrim Telemetry System. All outcomes finalized.</span></div><div class="flex items-center gap-space-lg text-on-surface-variant font-data-mono text-body-sm"><span class="flex items-center gap-space-xs"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>LEAGUE REGULATION 5V5</span><span>SYSTEM ACTIVE</span></div></div></footer></body></html>

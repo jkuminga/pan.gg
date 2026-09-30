@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed-variant":"#594311","on-primary-container":"#004e48","tertiary-fixed-dim":"#b4c5ff","outline":"#859491","on-secondary":"#402d00","on-tertiary-container":"#003ca4","surface-bright":"#353944","inverse-surface":"#dfe2f1","on-secondary-container":"#d3b478","secondary-container":"#5c4613","error":"#ffb4ab","on-background":"#dfe2f1","error-container":"#93000a","on-error-container":"#ffdad6","surface":"#0f131d","secondary":"#e2c384","surface-dim":"#0f131d","primary-fixed-dim":"#3bdccd","on-tertiary-fixed-variant":"#003ea8","surface-tint":"#3bdccd","outline-variant":"#3c4a47","tertiary":"#bfcdff","surface-container-highest":"#313540","surface-variant":"#313540","surface-container-lowest":"#0a0e18","on-secondary-fixed":"#261a00","on-primary-fixed-variant":"#005049","secondary-fixed-dim":"#e2c384","surface-container":"#1c1f2a","primary":"#47e4d5","primary-container":"#0ac8b9","on-surface-variant":"#bacac6","tertiary-container":"#97b0ff","on-primary":"#003732","surface-container-low":"#171b26","inverse-primary":"#006a62","on-primary-fixed":"#00201d","tertiary-fixed":"#dbe1ff","surface-container-high":"#262a35","on-tertiary":"#002a78","on-tertiary-fixed":"#00174b","on-surface":"#dfe2f1","inverse-on-surface":"#2c303b","background":"#0f131d","primary-fixed":"#61f9e9","secondary-fixed":"#ffdfa0","on-error":"#690005"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.25rem","margin-tablet":"2rem","space-xs":"0.25rem","margin":"1rem","space-lg":"1.5rem","space-md":"1rem","gutter-desktop":"1.75rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-desktop":"3rem"},"fontFamily":{"display-hero":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"data-mono-lg":["JetBrains Mono"],"badge-label":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"body-lg":["Inter"],"title-team":["Space Grotesk"],"headline-md":["Space Grotesk"],"data-mono":["JetBrains Mono"],"body-sm":["Inter"],"body-md":["Inter"]},"fontSize":{"display-hero":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"data-mono-lg":["20px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"700"}],"badge-label":["11px",{"lineHeight":"14px","letterSpacing":"0.1em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"display-hero-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"title-team":["16px",{"lineHeight":"22px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono":["14px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen selection:bg-primary/20 selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-20 w-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><div class="absolute -inset-1 rounded-full bg-primary/20 blur-sm"></div><span class="relative flex h-9 w-9 items-center justify-center rounded-xl bg-surface-container-high border border-primary/40 text-primary shadow-[0_0_12px_rgba(71,228,213,0.3)]"><span class="material-symbols-outlined text-xl">sports_esports</span></span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface font-bold">내전<span class="text-primary">LOG</span></span><span class="font-badge-label text-badge-label uppercase text-on-surface-variant tracking-widest">Scrim Tracker</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-badge-label text-badge-label uppercase text-on-surface-variant font-medium tracking-wider">리그오브레전드 내전 전적 관리</span></div></div><nav class="hidden md:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-lowest border border-outline-variant" data-active-classes="bg-surface-container-high text-primary border border-primary/30 shadow-[0_0_12px_rgba(10,200,185,0.2)] rounded-lg"><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="home" href="#">홈</a><a aria-current="page" class="px-space-md py-space-sm font-headline-sm transition-all bg-surface-container-high text-primary border border-primary/30 shadow-[0_0_12px_rgba(10,200,185,0.2)] rounded-lg" data-path="game-list" href="#">게임 목록</a><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="record-game" href="#">게임 전적 등록</a><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="players" href="#">플레이어 관리</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center gap-space-md px-space-md py-space-xs rounded-xl bg-surface-container-low border border-outline-variant"><div class="flex flex-col text-right"><span class="font-badge-label text-badge-label uppercase text-on-surface-variant">등록된 플레이어</span><span class="font-data-mono text-data-mono text-primary font-bold">14명</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex flex-col text-right"><span class="font-badge-label text-badge-label uppercase text-on-surface-variant">총 진행 경기</span><span class="font-data-mono text-data-mono text-secondary font-bold">28회</span></div></div><a class="relative group overflow-hidden px-space-md py-space-sm rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-bold tracking-wide shadow-[0_0_16px_rgba(10,200,185,0.35)] hover:shadow-[0_0_24px_rgba(71,228,213,0.6)] transition-all flex items-center gap-space-xs shrink-0" data-path="record-game" href="#"><span class="material-symbols-outlined text-lg">add_circle</span><span>+ 전적 등록</span></a><div class="flex items-center gap-space-sm pl-space-xs border-l border-outline-variant"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida/AEtjO1XCTfCQlJHgSuPHlMlMP722AkjFNfXp-SWUHxlzOy-BostPakKWeqeQviAuitj0m5m3Cwtb8pR1Cq-gbzCn5rqUxIu7qn_qVceUZMyjaqbK1UrVLqsER-iV3lc898FF21nzDaNf4F40XDy2bWcMM1aSmTukyFO9eaPEWIg7DcEkn_a2H-D64Wqc129wX8xCcDXdUr9muq1LJ3-9zhbQNJW5NB_s_kpfeYKQKojvjnEFSOmUpFDYFVY4K2PA"/></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<!-- Context Header & Overview Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-badge-label text-badge-label uppercase text-primary tracking-widest bg-primary/10 px-space-sm py-1 rounded">MATCH ARCHIVES</span>
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">공식 5v5 내전 기록 저장소</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">경기 전적 목록</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">검증 및 확정된 모든 내전 결투의 승패, 판돈 및 10인의 참전 소환사 명단입니다.</p>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<div class="hidden sm:flex flex-col text-right pr-space-md">
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">총 누적 판돈</span>
+<span class="font-data-mono-lg text-data-mono-lg text-secondary font-bold">₩ 2,800,000</span>
+</div>
+<a class="px-space-lg py-space-sm rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-bold shadow-lg hover:shadow-xl shadow-primary-container/20 flex items-center gap-space-xs transition-all" data-path="record-game" href="#">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>새 전적 등록</span>
+</a>
+</div>
+</div>
+<!-- Filter and Search Control Bar -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mb-space-lg shadow-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-11 pr-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/40 placeholder:text-on-surface-variant/50 transition-all" id="playerSearchInput" placeholder="참가자 소환사명 또는 경기 번호(#28) 검색" type="text"/>
+</div>
+<!-- Filters & Sorting Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Team Winner Filter Pills -->
+<div class="flex items-center p-1 bg-surface-container-lowest rounded-lg">
+<button class="filter-tab px-space-md py-1.5 rounded-lg font-headline-sm text-body-sm text-on-surface bg-surface-container-high transition-all" data-filter="all">전체 승리</button>
+<button class="filter-tab px-space-md py-1.5 rounded-lg font-headline-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" data-filter="blue">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+            블루 승
+          </button>
+<button class="filter-tab px-space-md py-1.5 rounded-lg font-headline-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" data-filter="red">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+            레드 승
+          </button>
+</div>
+<!-- Sorting Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm pl-space-md pr-8 py-2 rounded-lg focus:outline-none cursor-pointer" id="sortOrderSelect">
+<option value="desc">일자 최신순</option>
+<option value="asc">일자 과거순</option>
+<option value="stake-high">판돈 높은순</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+<!-- Reset Button -->
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all" id="resetFilters" title="필터 초기화">
+<span class="material-symbols-outlined text-lg">refresh</span>
+</button>
+</div>
+</div>
+<!-- Mode Switcher: Active Log vs Empty State Simulation -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs font-badge-label text-badge-label uppercase text-on-surface-variant">
+<span>SHOWING:</span>
+<span class="text-primary font-bold" id="matchCountLabel">4 MATCHES FOUND</span>
+</div>
+<!-- Quick toggle for developers/reviewers to view empty state -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1 rounded">
+<span class="font-badge-label text-badge-label text-on-surface-variant">VIEW MODE:</span>
+<button class="font-data-mono text-body-sm px-2 py-0.5 rounded bg-primary/20 text-primary font-bold" id="viewActiveBtn">기록 목록</button>
+<button class="font-data-mono text-body-sm px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface" id="viewEmptyBtn">기록 없는 상태 (Empty State)</button>
+</div>
+</div>
+<!-- Active Match History List Container -->
+<div class="flex flex-col gap-space-lg" id="matchListContainer">
+<!-- MATCH CARD #28 (BLUE WIN) -->
+<article class="match-item group relative bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-match-id="28" data-winner="blue">
+<!-- Blue Win Emissive Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container shadow-[0_0_12px_rgba(151,176,255,0.6)]"></div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Top Row: Meta, Stake, Winner Status -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-sm border-b border-surface-container-highest">
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-lg text-data-mono-lg text-primary font-bold">#28</span>
+<div class="flex items-center gap-space-xs font-data-mono text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>2025.02.24 21:30</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Stake Indicator -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary text-base">monetization_on</span>
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">인당 판돈</span>
+<span class="font-data-mono text-data-mono text-secondary font-bold">₩ 10,000</span>
+<span class="text-on-surface-variant font-data-mono text-body-sm">(총 상금풀 ₩100,000)</span>
+</div>
+<!-- Winner Badge: BLUE WIN -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded bg-tertiary-fixed-dim/20 text-tertiary font-title-team text-title-team uppercase tracking-wider shadow-[0_0_14px_rgba(151,176,255,0.35)]">
+<span class="material-symbols-outlined text-sm">trophy</span>
+<span>BLUE WIN</span>
+</div>
+</div>
+</div>
+<!-- Roster confrontation 5v5 (Slot 1 ~ 5) -->
+<div class="grid grid-cols-1 lg:grid-cols-11 items-center gap-space-md">
+<!-- Blue Team Slot 1-5 (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-lg">
+<div class="flex items-center justify-between mb-1">
+<span class="font-badge-label text-badge-label uppercase text-tertiary font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  BLUE TEAM (승리)
+                </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant">5 PARTICIPANTS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs">
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">01</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="페이커참전">페이커참전</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">02</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="협곡의지배자">협곡의지배자</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">03</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="미드오픈금지">미드오픈금지</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">04</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="바텀장인루시">바텀장인루시</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">05</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="서폿의품격">서폿의품격</span>
+</div>
+</div>
+</div>
+<!-- VS Badge Node (1 col) -->
+<div class="lg:col-span-1 flex flex-col items-center justify-center">
+<span class="font-title-team text-title-team text-on-surface-variant/40 italic">VS</span>
+</div>
+<!-- Red Team Slot 1-5 (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-lg opacity-85">
+<div class="flex items-center justify-between mb-1">
+<span class="font-badge-label text-badge-label uppercase text-error font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                  RED TEAM (패배)
+                </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant">5 PARTICIPANTS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs">
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">01</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="탑신병자수호자">탑신병자수호자</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">02</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="정글갱킹전문">정글갱킹전문</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">03</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="황혼의암살자">황혼의암살자</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">04</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="하이퍼캐리원딜">하이퍼캐리원딜</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">05</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="와드설치장인">와드설치장인</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Link -->
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">STATUS: VERIFIED &amp; SETTLED</span>
+<a class="font-headline-sm text-body-sm text-primary hover:text-primary-fixed flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+<span>상세 정보 보기</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- MATCH CARD #27 (RED WIN) -->
+<article class="match-item group relative bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-match-id="27" data-winner="red">
+<!-- Red Win Emissive Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error shadow-[0_0_12px_rgba(255,180,171,0.6)]"></div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Top Row: Meta, Stake, Winner Status -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-sm border-b border-surface-container-highest">
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-lg text-data-mono-lg text-primary font-bold">#27</span>
+<div class="flex items-center gap-space-xs font-data-mono text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>2025.02.24 19:40</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Stake Indicator -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary text-base">monetization_on</span>
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">인당 판돈</span>
+<span class="font-data-mono text-data-mono text-secondary font-bold">₩ 10,000</span>
+<span class="text-on-surface-variant font-data-mono text-body-sm">(총 상금풀 ₩100,000)</span>
+</div>
+<!-- Winner Badge: RED WIN -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded bg-error-container/40 text-error font-title-team text-title-team uppercase tracking-wider shadow-[0_0_14px_rgba(255,180,171,0.35)]">
+<span class="material-symbols-outlined text-sm">trophy</span>
+<span>RED WIN</span>
+</div>
+</div>
+</div>
+<!-- Roster confrontation 5v5 (Slot 1 ~ 5) -->
+<div class="grid grid-cols-1 lg:grid-cols-11 items-center gap-space-md">
+<!-- Blue Team Slot 1-5 (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-lg opacity-85">
+<div class="flex items-center justify-between mb-1">
+<span class="font-badge-label text-badge-label uppercase text-tertiary font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  BLUE TEAM (패배)
+                </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant">5 PARTICIPANTS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs">
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">01</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="빛의기사">빛의기사</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">02</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="숲속의사냥꾼">숲속의사냥꾼</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">03</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="빙하의마도사">빙하의마도사</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">04</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="불꽃저격수">불꽃저격수</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">05</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="강철방패벽">강철방패벽</span>
+</div>
+</div>
+</div>
+<!-- VS Badge Node (1 col) -->
+<div class="lg:col-span-1 flex flex-col items-center justify-center">
+<span class="font-title-team text-title-team text-on-surface-variant/40 italic">VS</span>
+</div>
+<!-- Red Team Slot 1-5 (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-lg">
+<div class="flex items-center justify-between mb-1">
+<span class="font-badge-label text-badge-label uppercase text-error font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                  RED TEAM (승리)
+                </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant">5 PARTICIPANTS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs">
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">01</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="폭풍의칼날">폭풍의칼날</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">02</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="심연의포식자">심연의포식자</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">03</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="비전파동포">비전파동포</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">04</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="은빛화살통">은빛화살통</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">05</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="생명의수호신">생명의수호신</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Link -->
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">STATUS: VERIFIED &amp; SETTLED</span>
+<a class="font-headline-sm text-body-sm text-primary hover:text-primary-fixed flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+<span>상세 정보 보기</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- MATCH CARD #26 (BLUE WIN) -->
+<article class="match-item group relative bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-match-id="26" data-winner="blue">
+<!-- Blue Win Emissive Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container shadow-[0_0_12px_rgba(151,176,255,0.6)]"></div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Top Row: Meta, Stake, Winner Status -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-sm border-b border-surface-container-highest">
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-lg text-data-mono-lg text-primary font-bold">#26</span>
+<div class="flex items-center gap-space-xs font-data-mono text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>2025.02.23 23:10</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Stake Indicator -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary text-base">monetization_on</span>
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">인당 판돈</span>
+<span class="font-data-mono text-data-mono text-secondary font-bold">₩ 10,000</span>
+<span class="text-on-surface-variant font-data-mono text-body-sm">(총 상금풀 ₩100,000)</span>
+</div>
+<!-- Winner Badge: BLUE WIN -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded bg-tertiary-fixed-dim/20 text-tertiary font-title-team text-title-team uppercase tracking-wider shadow-[0_0_14px_rgba(151,176,255,0.35)]">
+<span class="material-symbols-outlined text-sm">trophy</span>
+<span>BLUE WIN</span>
+</div>
+</div>
+</div>
+<!-- Roster confrontation 5v5 (Slot 1 ~ 5) -->
+<div class="grid grid-cols-1 lg:grid-cols-11 items-center gap-space-md">
+<!-- Blue Team Slot 1-5 (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-lg">
+<div class="flex items-center justify-between mb-1">
+<span class="font-badge-label text-badge-label uppercase text-tertiary font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  BLUE TEAM (승리)
+                </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant">5 PARTICIPANTS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs">
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">01</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="도란의방패선호">도란의방패선호</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">02</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="바론스틸장인">바론스틸장인</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">03</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="지휘관의깃발">지휘관의깃발</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">04</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="무한의대검소유">무한의대검소유</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">05</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="구원의성역">구원의성역</span>
+</div>
+</div>
+</div>
+<!-- VS Badge Node (1 col) -->
+<div class="lg:col-span-1 flex flex-col items-center justify-center">
+<span class="font-title-team text-title-team text-on-surface-variant/40 italic">VS</span>
+</div>
+<!-- Red Team Slot 1-5 (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-lg opacity-85">
+<div class="flex items-center justify-between mb-1">
+<span class="font-badge-label text-badge-label uppercase text-error font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                  RED TEAM (패배)
+                </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant">5 PARTICIPANTS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs">
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">01</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="침묵의돌격대">침묵의돌격대</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">02</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="협곡추적자">협곡추적자</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">03</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="마력폭주자">마력폭주자</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">04</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="치명타원기옥">치명타원기옥</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">05</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="소나의선율">소나의선율</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Link -->
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">STATUS: VERIFIED &amp; SETTLED</span>
+<a class="font-headline-sm text-body-sm text-primary hover:text-primary-fixed flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+<span>상세 정보 보기</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- MATCH CARD #25 (RED WIN) -->
+<article class="match-item group relative bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-match-id="25" data-winner="red">
+<!-- Red Win Emissive Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error shadow-[0_0_12px_rgba(255,180,171,0.6)]"></div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Top Row: Meta, Stake, Winner Status -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-sm border-b border-surface-container-highest">
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-lg text-data-mono-lg text-primary font-bold">#25</span>
+<div class="flex items-center gap-space-xs font-data-mono text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>2025.02.22 18:00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Stake Indicator -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary text-base">monetization_on</span>
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">인당 판돈</span>
+<span class="font-data-mono text-data-mono text-secondary font-bold">₩ 10,000</span>
+<span class="text-on-surface-variant font-data-mono text-body-sm">(총 상금풀 ₩100,000)</span>
+</div>
+<!-- Winner Badge: RED WIN -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded bg-error-container/40 text-error font-title-team text-title-team uppercase tracking-wider shadow-[0_0_14px_rgba(255,180,171,0.35)]">
+<span class="material-symbols-outlined text-sm">trophy</span>
+<span>RED WIN</span>
+</div>
+</div>
+</div>
+<!-- Roster confrontation 5v5 (Slot 1 ~ 5) -->
+<div class="grid grid-cols-1 lg:grid-cols-11 items-center gap-space-md">
+<!-- Blue Team Slot 1-5 (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-lg opacity-85">
+<div class="flex items-center justify-between mb-1">
+<span class="font-badge-label text-badge-label uppercase text-tertiary font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  BLUE TEAM (패배)
+                </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant">5 PARTICIPANTS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs">
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">01</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="강철의포로">강철의포로</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">02</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="용사냥꾼">용사냥꾼</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">03</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="환영술사카르마">환영술사카르마</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">04</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="돌풍회피">돌풍회피</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-tertiary font-bold">05</span>
+<span class="font-body-md text-body-sm text-on-surface truncate" title="탈진걸어줌">탈진걸어줌</span>
+</div>
+</div>
+</div>
+<!-- VS Badge Node (1 col) -->
+<div class="lg:col-span-1 flex flex-col items-center justify-center">
+<span class="font-title-team text-title-team text-on-surface-variant/40 italic">VS</span>
+</div>
+<!-- Red Team Slot 1-5 (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs bg-surface-container/60 p-space-md rounded-lg">
+<div class="flex items-center justify-between mb-1">
+<span class="font-badge-label text-badge-label uppercase text-error font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                  RED TEAM (승리)
+                </span>
+<span class="font-badge-label text-badge-label text-on-surface-variant">5 PARTICIPANTS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-xs">
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">01</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="아트록스빙의">아트록스빙의</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">02</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="협곡의망령">협곡의망령</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">03</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="존야의모래시계">존야의모래시계</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">04</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="펜타킬수집가">펜타킬수집가</span>
+</div>
+<div class="flex items-center gap-1.5 p-1.5 rounded bg-surface-container-lowest">
+<span class="font-data-mono text-badge-label text-error font-bold">05</span>
+<span class="font-body-md text-body-sm text-on-surface truncate font-semibold" title="철벽의알리">철벽의알리</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Link -->
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">STATUS: VERIFIED &amp; SETTLED</span>
+<a class="font-headline-sm text-body-sm text-primary hover:text-primary-fixed flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+<span>상세 정보 보기</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State Container (Displayed dynamically or via toggle) -->
+<div class="hidden flex-col items-center justify-center py-space-xl px-space-md text-center bg-surface-container-low rounded-2xl shadow-xl mt-space-md" id="emptyStateContainer">
+<!-- Cybernetic Decorative Ring / Icon Container -->
+<div class="relative mb-space-lg flex items-center justify-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-highest flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-5xl text-outline">sports_esports</span>
+</div>
+<div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm">history_toggle_off</span>
+</div>
+</div>
+<span class="font-badge-label text-badge-label uppercase text-primary tracking-widest mb-space-xs">NO RECORD FOUND</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-space-sm">등록된 경기 전적이 없습니다</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-xl">
+        진행된 5v5 리그오브레전드 내전 결과가 아직 기록되지 않았습니다.<br/>
+        첫 내전 경기의 승리팀과 참가자를 등록하고 판돈 정산을 시작해보세요.
+      </p>
+<a class="px-space-xl py-space-md rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-bold shadow-lg hover:shadow-2xl shadow-primary-container/20 flex items-center gap-space-sm transition-all" data-path="record-game" href="#">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span>첫 경기 전적 등록하기</span>
+</a>
+<!-- Quick Tips Box inside Empty State -->
+<div class="mt-space-xl pt-space-lg border-t border-surface-container-highest max-w-lg w-full grid grid-cols-1 sm:grid-cols-2 gap-space-md text-left">
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-body-sm mb-1">
+<span class="material-symbols-outlined text-base">group</span>
+<span>10인 로스터 기록</span>
+</div>
+<p class="text-on-surface-variant text-body-sm">블루 5인, 레드 5인의 소환사명을 정확히 기입하여 전적을 누적합니다.</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs text-secondary font-headline-sm text-body-sm mb-1">
+<span class="material-symbols-outlined text-base">payments</span>
+<span>판돈 투명 정산</span>
+</div>
+<p class="text-on-surface-variant text-body-sm">1인당 참여 판돈을 기준으로 총 상금풀이 자동 집계 및 동기화됩니다.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Telemetry Summary Banner -->
+<div class="mt-space-xl p-space-lg rounded-xl bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="p-2.5 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">내전 전적 정산 시스템 가동 중</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">모든 경기 결과는 승패 확정 즉시 플레이어 개인 승률 및 누적 포인트에 반영됩니다.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-right font-data-mono text-body-sm text-on-surface-variant">
+<div>블루 승률 <span class="text-tertiary font-bold">50.0%</span></div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div>레드 승률 <span class="text-error font-bold">50.0%</span></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const listContainer = document.getElementById('matchListContainer');
+    const emptyState = document.getElementById('emptyStateContainer');
+    const matchCountLabel = document.getElementById('matchCountLabel');
+    const searchInput = document.getElementById('playerSearchInput');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const sortSelect = document.getElementById('sortOrderSelect');
+    const resetBtn = document.getElementById('resetFilters');
+    
+    const viewActiveBtn = document.getElementById('viewActiveBtn');
+    const viewEmptyBtn = document.getElementById('viewEmptyBtn');
+
+    let currentFilter = 'all';
+
+    // View toggle handler for simulation
+    viewEmptyBtn.addEventListener('click', () => {
+      listContainer.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+      viewEmptyBtn.className = 'font-data-mono text-body-sm px-2 py-0.5 rounded bg-primary/20 text-primary font-bold';
+      viewActiveBtn.className = 'font-data-mono text-body-sm px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface';
+      matchCountLabel.textContent = '0 MATCHES FOUND';
+    });
+
+    viewActiveBtn.addEventListener('click', () => {
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+      listContainer.classList.remove('hidden');
+      viewActiveBtn.className = 'font-data-mono text-body-sm px-2 py-0.5 rounded bg-primary/20 text-primary font-bold';
+      viewEmptyBtn.className = 'font-data-mono text-body-sm px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface';
+      applyFilters();
+    });
+
+    // Filter by Winner
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.classList.remove('bg-surface-container-high', 'text-on-surface');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-surface-container-high', 'text-on-surface');
+        tab.classList.remove('text-on-surface-variant');
+
+        currentFilter = tab.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+
+    function applyFilters() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      const items = Array.from(document.querySelectorAll('.match-item'));
+      let visibleCount = 0;
+
+      items.forEach(item => {
+        const winner = item.getAttribute('data-winner');
+        const matchId = '#' + item.getAttribute('data-match-id');
+        const cardText = item.textContent.toLowerCase();
+
+        const matchesWinner = (currentFilter === 'all') || (winner === currentFilter);
+        const matchesSearch = !searchTerm || cardText.includes(searchTerm) || matchId.includes(searchTerm);
+
+        if (matchesWinner && matchesSearch) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      matchCountLabel.textContent = visibleCount + ' MATCHES FOUND';
+
+      if (visibleCount === 0 && !listContainer.classList.contains('hidden')) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        listContainer.classList.add('hidden');
+      } else if (visibleCount > 0 && listContainer.classList.contains('hidden') && viewActiveBtn.classList.contains('text-primary')) {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+        listContainer.classList.remove('hidden');
+      }
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+
+    resetBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      currentFilter = 'all';
+      filterTabs.forEach((t, i) => {
+        if (i === 0) {
+          t.classList.add('bg-surface-container-high', 'text-on-surface');
+          t.classList.remove('text-on-surface-variant');
+        } else {
+          t.classList.remove('bg-surface-container-high', 'text-on-surface');
+          t.classList.add('text-on-surface-variant');
+        }
+      });
+      sortSelect.value = 'desc';
+      sortItems('desc');
+      applyFilters();
+    });
+
+    // Simple Sort
+    sortSelect.addEventListener('change', (e) => {
+      sortItems(e.target.value);
+    });
+
+    function sortItems(direction) {
+      const items = Array.from(document.querySelectorAll('.match-item'));
+      items.sort((a, b) => {
+        const idA = parseInt(a.getAttribute('data-match-id'), 10);
+        const idB = parseInt(b.getAttribute('data-match-id'), 10);
+        return direction === 'asc' ? idA - idB : idB - idA;
+      });
+
+      items.forEach(el => listContainer.appendChild(el));
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant py-space-lg"><div class="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-body-md text-on-surface font-semibold">내전<span class="text-primary">LOG</span></span><span class="text-on-surface-variant font-data-mono text-body-sm">© 2024 Scrim Telemetry System. All outcomes finalized.</span></div><div class="flex items-center gap-space-lg text-on-surface-variant font-data-mono text-body-sm"><span class="flex items-center gap-space-xs"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>LEAGUE REGULATION 5V5</span><span>SYSTEM ACTIVE</span></div></div></footer></body></html>

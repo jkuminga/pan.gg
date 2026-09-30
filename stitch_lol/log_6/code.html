@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed-variant":"#594311","on-primary-container":"#004e48","tertiary-fixed-dim":"#b4c5ff","outline":"#859491","on-secondary":"#402d00","on-tertiary-container":"#003ca4","surface-bright":"#353944","inverse-surface":"#dfe2f1","on-secondary-container":"#d3b478","secondary-container":"#5c4613","error":"#ffb4ab","on-background":"#dfe2f1","error-container":"#93000a","on-error-container":"#ffdad6","surface":"#0f131d","secondary":"#e2c384","surface-dim":"#0f131d","primary-fixed-dim":"#3bdccd","on-tertiary-fixed-variant":"#003ea8","surface-tint":"#3bdccd","outline-variant":"#3c4a47","tertiary":"#bfcdff","surface-container-highest":"#313540","surface-variant":"#313540","surface-container-lowest":"#0a0e18","on-secondary-fixed":"#261a00","on-primary-fixed-variant":"#005049","secondary-fixed-dim":"#e2c384","surface-container":"#1c1f2a","primary":"#47e4d5","primary-container":"#0ac8b9","on-surface-variant":"#bacac6","tertiary-container":"#97b0ff","on-primary":"#003732","surface-container-low":"#171b26","inverse-primary":"#006a62","on-primary-fixed":"#00201d","tertiary-fixed":"#dbe1ff","surface-container-high":"#262a35","on-tertiary":"#002a78","on-tertiary-fixed":"#00174b","on-surface":"#dfe2f1","inverse-on-surface":"#2c303b","background":"#0f131d","primary-fixed":"#61f9e9","secondary-fixed":"#ffdfa0","on-error":"#690005"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.25rem","margin-tablet":"2rem","space-xs":"0.25rem","margin":"1rem","space-lg":"1.5rem","space-md":"1rem","gutter-desktop":"1.75rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-desktop":"3rem"},"fontFamily":{"display-hero":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"data-mono-lg":["JetBrains Mono"],"badge-label":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"body-lg":["Inter"],"title-team":["Space Grotesk"],"headline-md":["Space Grotesk"],"data-mono":["JetBrains Mono"],"body-sm":["Inter"],"body-md":["Inter"]},"fontSize":{"display-hero":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"data-mono-lg":["20px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"700"}],"badge-label":["11px",{"lineHeight":"14px","letterSpacing":"0.1em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"display-hero-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"title-team":["16px",{"lineHeight":"22px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono":["14px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen selection:bg-primary/20 selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-20 w-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><div class="absolute -inset-1 rounded-full bg-primary/20 blur-sm"></div><span class="relative flex h-9 w-9 items-center justify-center rounded-xl bg-surface-container-high border border-primary/40 text-primary shadow-[0_0_12px_rgba(71,228,213,0.3)]"><span class="material-symbols-outlined text-xl">sports_esports</span></span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface font-bold">내전<span class="text-primary">LOG</span></span><span class="font-badge-label text-badge-label uppercase text-on-surface-variant tracking-widest">Scrim Tracker</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-badge-label text-badge-label uppercase text-on-surface-variant font-medium tracking-wider">리그오브레전드 내전 전적 관리</span></div></div><nav class="hidden md:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-lowest border border-outline-variant" data-active-classes="bg-surface-container-high text-primary border border-primary/30 shadow-[0_0_12px_rgba(10,200,185,0.2)] rounded-lg"><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="home" href="#">홈</a><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="game-list" href="#">게임 목록</a><a aria-current="page" class="px-space-md py-space-sm font-headline-sm transition-all bg-surface-container-high text-primary border border-primary/30 shadow-[0_0_12px_rgba(10,200,185,0.2)] rounded-lg" data-path="record-game" href="#">게임 전적 등록</a><a class="px-space-md py-space-sm font-headline-sm text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="players" href="#">플레이어 관리</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center gap-space-md px-space-md py-space-xs rounded-xl bg-surface-container-low border border-outline-variant"><div class="flex flex-col text-right"><span class="font-badge-label text-badge-label uppercase text-on-surface-variant">등록된 플레이어</span><span class="font-data-mono text-data-mono text-primary font-bold">14명</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex flex-col text-right"><span class="font-badge-label text-badge-label uppercase text-on-surface-variant">총 진행 경기</span><span class="font-data-mono text-data-mono text-secondary font-bold">28회</span></div></div><a class="relative group overflow-hidden px-space-md py-space-sm rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-body-md font-bold tracking-wide shadow-[0_0_16px_rgba(10,200,185,0.35)] hover:shadow-[0_0_24px_rgba(71,228,213,0.6)] transition-all flex items-center gap-space-xs shrink-0" data-path="record-game" href="#"><span class="material-symbols-outlined text-lg">add_circle</span><span>+ 전적 등록</span></a><div class="flex items-center gap-space-sm pl-space-xs border-l border-outline-variant"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida/AEtjO1XCTfCQlJHgSuPHlMlMP722AkjFNfXp-SWUHxlzOy-BostPakKWeqeQviAuitj0m5m3Cwtb8pR1Cq-gbzCn5rqUxIu7qn_qVceUZMyjaqbK1UrVLqsER-iV3lc898FF21nzDaNf4F40XDy2bWcMM1aSmTukyFO9eaPEWIg7DcEkn_a2H-D64Wqc129wX8xCcDXdUr9muq1LJ3-9zhbQNJW5NB_s_kpfeYKQKojvjnEFSOmUpFDYFVY4K2PA"/></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden px-gutter md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 -right-24 w-80 h-80 bg-error/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-10 left-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="inline-flex items-center px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-badge-label text-badge-label uppercase tracking-widest shadow-sm">MATCH RECORD PROTOCOL</span><span class="text-outline-variant font-data-mono text-body-sm">•</span><span class="text-on-surface-variant font-data-mono text-body-sm">FLEXIBLE ROSTER SCRIM (2V2 ~ 5V5)</span></div><h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">신규 경기 전적 등록</h1><p class="font-body-md text-body-md text-on-surface-variant">자유 인원 매치(2v2 ~ 5v5) 및 커스텀 스크림 전적을 유연하게 기록합니다.</p></div>
+<div class="flex flex-wrap items-center gap-space-sm"><div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-surface-container-high shadow-md" id="slot-completion-pill"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span><span class="font-badge-label text-badge-label uppercase text-on-surface-variant">팀 인원 현황</span><span class="font-data-mono-lg text-data-mono-lg text-primary font-bold" id="slot-counter">블루 3명 / 레드 3명</span><span class="px-space-xs py-0.5 rounded bg-primary/20 text-primary font-badge-label text-badge-label font-bold" id="slot-validation-badge">균등 매칭 (중복 없음)</span></div><div class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container-low text-secondary font-data-mono text-body-md shadow-sm"><span class="material-symbols-outlined text-lg">paid</span><span class="font-badge-label text-badge-label text-on-surface-variant">총 매치 볼륨</span><span class="font-headline-sm text-headline-sm font-bold text-secondary" id="total-pool-display">₩60,000</span></div></div>
+</div>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg p-space-lg rounded-xl bg-surface-container shadow-xl">
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-space-xs font-title-team text-body-md text-on-surface" for="match-time-input">
+<span class="material-symbols-outlined text-primary text-base">schedule</span>
+<span>경기 일시</span>
+</label>
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">TIMESTAMP</span>
+</div>
+<div class="relative">
+<input class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-data-mono text-body-md shadow-inner focus:outline-none focus:bg-surface-container-high transition-colors" id="match-time-input" type="text" value="2025-02-24 22:45"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant pointer-events-none text-lg">edit_calendar</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">공식 종료 시각 기준 기본 입력</p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-space-xs font-title-team text-body-md text-on-surface" for="stake-input">
+<span class="material-symbols-outlined text-secondary text-base">monetization_on</span>
+<span>1인당 판돈</span>
+</label>
+<span class="font-badge-label text-badge-label text-secondary uppercase font-bold">1인당 0원 이상</span>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 font-data-mono text-secondary font-bold">₩</span>
+<input class="w-full pl-8 pr-12 py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-data-mono-lg text-data-mono-lg font-bold shadow-inner focus:outline-none focus:bg-surface-container-high transition-colors" id="stake-input" min="0" step="1000" type="number" value="10000"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-data-mono text-body-sm text-on-surface-variant">KRW</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-data-mono text-body-sm transition-colors" onclick="adjustStake(0)" type="button">0원</button>
+<button class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-data-mono text-body-sm transition-colors" onclick="adjustStake(10000)" type="button">+1만</button>
+<button class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-data-mono text-body-sm transition-colors" onclick="adjustStake(30000)" type="button">+3만</button>
+<button class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-data-mono text-body-sm transition-colors" onclick="adjustStake(50000)" type="button">+5만</button>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs font-title-team text-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">military_tech</span>
+<span>승리 진영 결정</span>
+</span>
+<span class="font-badge-label text-badge-label text-primary uppercase font-bold">MATCH VERDICT</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm p-1 rounded-lg bg-surface-container-lowest">
+<button class="relative flex items-center justify-center gap-space-xs py-space-sm rounded-lg bg-primary-container text-on-primary font-title-team text-body-md uppercase shadow-lg shadow-primary/20 transition-all cursor-pointer" id="winner-blue-btn" onclick="setWinner('blue')" type="button">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>BLUE 팀 승리</span>
+</button>
+<button class="relative flex items-center justify-center gap-space-xs py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-title-team text-body-md uppercase transition-all cursor-pointer" id="winner-red-btn" onclick="setWinner('red')" type="button">
+<span class="material-symbols-outlined text-lg opacity-40">flag</span>
+<span>RED 팀 승리</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-primary" id="winner-hint">BLUE 진영이 승리팀으로 설정되었습니다.</p>
+</div>
+</section>
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<div class="xl:col-span-6 flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container-low shadow-2xl relative overflow-hidden transition-all" id="blue-card"><div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary"></div><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-7 h-7 rounded-lg bg-primary/20 text-primary flex items-center justify-center font-display-hero text-body-md font-bold">B</span><div><h2 class="font-title-team text-title-team text-primary tracking-wider uppercase">BLUE TEAM</h2><span class="font-badge-label text-badge-label text-on-surface-variant">진영 선픽권 / 현재 3명 등록 (최대 5명)</span></div></div><div class="flex items-center gap-space-xs"><span class="px-space-sm py-1 rounded bg-primary/10 border border-primary/30 text-primary font-data-mono text-body-sm font-bold">3 SLOTS</span><span class="px-space-sm py-1 rounded bg-primary text-on-primary font-badge-label text-badge-label uppercase font-bold shadow-md" id="blue-status-badge">VICTORY</span></div></div><div class="flex flex-col gap-space-sm" id="blue-slots-container"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant hover:border-primary/40 transition-colors group"><div class="flex items-center gap-space-sm"><span class="font-data-mono text-primary font-bold text-body-md w-8">01</span><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-badge-label text-badge-label uppercase font-semibold">SLOT 1</span><div class="flex items-center gap-space-xs"><span class="font-title-team text-body-md text-on-surface font-bold">김민수</span><span class="font-body-sm text-on-surface-variant">(불꽃피스트)</span><span class="px-space-xs py-0.5 rounded bg-primary/20 text-primary font-badge-label text-badge-label">P01</span></div></div><button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-error/20 text-on-surface-variant hover:text-error transition-all" title="슬롯 삭제" type="button"><span class="material-symbols-outlined text-base">close</span></button></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant hover:border-primary/40 transition-colors group"><div class="flex items-center gap-space-sm"><span class="font-data-mono text-primary font-bold text-body-md w-8">02</span><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-badge-label text-badge-label uppercase font-semibold">SLOT 2</span><div class="flex items-center gap-space-xs"><span class="font-title-team text-body-md text-on-surface font-bold">이상혁</span><span class="font-body-sm text-on-surface-variant">(대상혁)</span><span class="px-space-xs py-0.5 rounded bg-primary/20 text-primary font-badge-label text-badge-label">P02</span></div></div><button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-error/20 text-on-surface-variant hover:text-error transition-all" title="슬롯 삭제" type="button"><span class="material-symbols-outlined text-base">close</span></button></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant hover:border-primary/40 transition-colors group"><div class="flex items-center gap-space-sm"><span class="font-data-mono text-primary font-bold text-body-md w-8">03</span><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-badge-label text-badge-label uppercase font-semibold">SLOT 3</span><div class="flex items-center gap-space-xs"><span class="font-title-team text-body-md text-on-surface font-bold">박도현</span><span class="font-body-sm text-on-surface-variant">(바이퍼)</span><span class="px-space-xs py-0.5 rounded bg-primary/20 text-primary font-badge-label text-badge-label">P03</span></div></div><button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-error/20 text-on-surface-variant hover:text-error transition-all" title="슬롯 삭제" type="button"><span class="material-symbols-outlined text-base">close</span></button></div><button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg border border-dashed border-primary/40 bg-primary/5 hover:bg-primary/10 text-primary font-title-team text-body-md transition-all group" type="button"><span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">person_add</span><span class="font-semibold">+ 플레이어 추가 (슬롯 추가)</span><span class="text-body-sm text-on-surface-variant font-data-mono ml-space-xs">[최대 5인]</span></button></div></div>
+<div class="xl:col-span-6 flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container-low shadow-2xl relative overflow-hidden transition-all" id="red-card"><div class="absolute top-0 right-0 bottom-0 w-1.5 bg-error"></div><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-7 h-7 rounded-lg bg-error/20 text-error flex items-center justify-center font-display-hero text-body-md font-bold">R</span><div><h2 class="font-title-team text-title-team text-error tracking-wider uppercase">RED TEAM</h2><span class="font-badge-label text-badge-label text-on-surface-variant">진영 후픽권 / 현재 3명 등록 (최대 5명)</span></div></div><div class="flex items-center gap-space-xs"><span class="px-space-sm py-1 rounded bg-error/10 border border-error/30 text-error font-data-mono text-body-sm font-bold">3 SLOTS</span><span class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant font-badge-label text-badge-label uppercase font-bold" id="red-status-badge">DEFEAT</span></div></div><div class="flex flex-col gap-space-sm" id="red-slots-container"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant hover:border-error/40 transition-colors group"><div class="flex items-center gap-space-sm"><span class="font-data-mono text-error font-bold text-body-md w-8">01</span><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-error font-badge-label text-badge-label uppercase font-semibold">SLOT 1</span><div class="flex items-center gap-space-xs"><span class="font-title-team text-body-md text-on-surface font-bold">한왕호</span><span class="font-body-sm text-on-surface-variant">(정글의법칙)</span><span class="px-space-xs py-0.5 rounded bg-error/20 text-error font-badge-label text-badge-label">P06</span></div></div><button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-error/20 text-on-surface-variant hover:text-error transition-all" title="슬롯 삭제" type="button"><span class="material-symbols-outlined text-base">close</span></button></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant hover:border-error/40 transition-colors group"><div class="flex items-center gap-space-sm"><span class="font-data-mono text-error font-bold text-body-md w-8">02</span><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-error font-badge-label text-badge-label uppercase font-semibold">SLOT 2</span><div class="flex items-center gap-space-xs"><span class="font-title-team text-body-md text-on-surface font-bold">정지훈</span><span class="font-body-sm text-on-surface-variant">(쵸비)</span><span class="px-space-xs py-0.5 rounded bg-error/20 text-error font-badge-label text-badge-label">P07</span></div></div><button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-error/20 text-on-surface-variant hover:text-error transition-all" title="슬롯 삭제" type="button"><span class="material-symbols-outlined text-base">close</span></button></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant hover:border-error/40 transition-colors group"><div class="flex items-center gap-space-sm"><span class="font-data-mono text-error font-bold text-body-md w-8">03</span><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-error font-badge-label text-badge-label uppercase font-semibold">SLOT 3</span><div class="flex items-center gap-space-xs"><span class="font-title-team text-body-md text-on-surface font-bold">김혁규</span><span class="font-body-sm text-on-surface-variant">(데프트)</span><span class="px-space-xs py-0.5 rounded bg-error/20 text-error font-badge-label text-badge-label">P08</span></div></div><button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-error/20 text-on-surface-variant hover:text-error transition-all" title="슬롯 삭제" type="button"><span class="material-symbols-outlined text-base">close</span></button></div><button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg border border-dashed border-error/40 bg-error/5 hover:bg-error/10 text-error font-title-team text-body-md transition-all group" type="button"><span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">person_add</span><span class="font-semibold">+ 플레이어 추가 (슬롯 추가)</span><span class="text-body-sm text-on-surface-variant font-data-mono ml-space-xs">[최대 5인]</span></button></div></div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-md p-space-lg rounded-xl bg-surface-container-low shadow-lg"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary text-xl mt-0.5">groups</span><div class="flex flex-col"><span class="font-title-team text-body-md text-on-surface font-bold">유연한 인원 매치 (2v2~5v5 지원)</span><span class="font-body-sm text-body-sm text-on-surface-variant">2:2 듀오전부터 3:3 칼바람, 5:5 소환사의 협곡까지 자유롭게 슬롯 인원을 구성합니다.</span></div></div><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-xl mt-0.5">person_add_alt</span><div class="flex flex-col"><span class="font-title-team text-body-md text-on-surface font-bold">클릭 기반 모달 선택으로 빠른 로스터 편성</span><span class="font-body-sm text-body-sm text-on-surface-variant">슬롯 추가 및 원클릭 제거 기능으로 인원 변경 시 손쉽게 라인업을 교체할 수 있습니다.</span></div></div><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-outline text-xl mt-0.5">verified_user</span><div class="flex flex-col"><span class="font-title-team text-body-md text-on-surface font-bold">1인 1슬롯 중복 검증 자동 적용</span><span class="font-body-sm text-body-sm text-on-surface-variant">팀 간/팀 내 동시 배정 방지 및 양 팀 균등 인원 검증이 실시간 통과되어야 저장됩니다.</span></div></div></section>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md pb-space-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-base">info</span>
+<span class="font-body-sm text-body-sm text-primary" id="footer-validation-msg">3:3 균등 매치 편성 완료 (총 6명, 중복 없음). 저장 버튼을 눌러 확정하십시오.</span>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-space-lg py-space-sm rounded-xl bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-headline-sm text-body-md font-semibold transition-colors" onclick="resetForm()" type="button">
+            초기화 / 취소
+          </button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-space-xs px-space-xl py-space-sm rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-headline-sm font-bold shadow-xl shadow-primary/30 hover:shadow-primary/50 transition-all cursor-pointer" id="save-match-btn" onclick="saveMatch()" type="button">
+<span class="material-symbols-outlined text-xl">save</span>
+<span>경기 전적 저장하기</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none" id="save-toast">
+<div class="flex items-center gap-space-sm px-space-lg py-space-md rounded-xl bg-surface-container-high shadow-2xl">
+<span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+<div class="flex flex-col">
+<span class="font-title-team text-body-md text-on-surface font-bold">경기 전적 저장 완료</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2025-02-24 22:45 경기가 공식 집계되었습니다.</span>
+</div>
+</div>
+</div>
+<script>
+    const PLAYERS = [
+      { id: "P01", name: "김민수", nickname: "불꽃피스트" },
+      { id: "P02", name: "이상혁", nickname: "대상혁" },
+      { id: "P03", name: "박도현", nickname: "바이퍼" },
+      { id: "P04", name: "류민석", nickname: "케리아" },
+      { id: "P05", name: "최우제", nickname: "제우스" },
+      { id: "P06", name: "한왕호", nickname: "정글의법칙" },
+      { id: "P07", name: "정지훈", nickname: "쵸비" },
+      { id: "P08", name: "김혁규", nickname: "데프트" },
+      { id: "P09", name: "조건희", nickname: "베릴" },
+      { id: "P10", name: "문현준", nickname: "오너" },
+      { id: "P11", name: "이재혁", nickname: "나이트" },
+      { id: "P12", name: "강승록", nickname: "더샤이" },
+      { id: "P13", name: "박재혁", nickname: "룰러" },
+      { id: "P14", name: "유환중", nickname: "딜라이트" }
+    ];
+
+    const slotSelections = {
+      "blue-1": "P01",
+      "blue-2": "P02",
+      "blue-3": "P03",
+      "blue-4": "P04",
+      "blue-5": "P05",
+      "red-1": "P06",
+      "red-2": "P07",
+      "red-3": "P08",
+      "red-4": "P09",
+      "red-5": "P10"
+    };
+
+    let currentWinner = "blue";
+
+    function populateSelects() {
+      const selects = document.querySelectorAll('.player-select');
+      selects.forEach(select => {
+        const slotKey = select.getAttribute('data-slot');
+        const currentValue = slotSelections[slotKey] || "";
+
+        select.innerHTML = '<option value="">플레이어 선택 (미지정)</option>';
+
+        PLAYERS.forEach(player => {
+          const opt = document.createElement('option');
+          opt.value = player.id;
+          opt.textContent = `${player.name} (${player.nickname})`;
+          if (player.id === currentValue) {
+            opt.selected = true;
+          }
+          select.appendChild(opt);
+        });
+
+        select.onchange = (e) => {
+          slotSelections[slotKey] = e.target.value;
+          updateSlotStates();
+        };
+      });
+      updateSlotStates();
+    }
+
+    function updateSlotStates() {
+      const selects = document.querySelectorAll('.player-select');
+      const chosenValues = Object.values(slotSelections).filter(v => v !== "");
+      
+      const counts = {};
+      chosenValues.forEach(id => {
+        counts[id] = (counts[id] || 0) + 1;
+      });
+
+      let hasDuplicates = false;
+      let filledCount = 0;
+
+      selects.forEach(select => {
+        const slotKey = select.getAttribute('data-slot');
+        const currentVal = slotSelections[slotKey];
+        if (currentVal) filledCount++;
+
+        const isDuplicated = currentVal && counts[currentVal] > 1;
+        if (isDuplicated) hasDuplicates = true;
+
+        const parentSlotRow = select.closest('.rounded-lg');
+        if (isDuplicated) {
+          parentSlotRow.classList.add('bg-error/10');
+          parentSlotRow.classList.remove('bg-surface-container-lowest');
+        } else {
+          parentSlotRow.classList.remove('bg-error/10');
+          parentSlotRow.classList.add('bg-surface-container-lowest');
+        }
+
+        Array.from(select.options).forEach(opt => {
+          if (!opt.value) return;
+          const assignedInOtherSlot = Object.entries(slotSelections).some(([key, val]) => key !== slotKey && val === opt.value);
+          if (assignedInOtherSlot) {
+            opt.textContent = `${opt.textContent.replace(' [배치됨]', '')} [배치됨]`;
+          } else {
+            opt.textContent = opt.textContent.replace(' [배치됨]', '');
+          }
+        });
+      });
+
+      const counter = document.getElementById('slot-counter');
+      const badge = document.getElementById('slot-validation-badge');
+      const footerMsg = document.getElementById('footer-validation-msg');
+      const saveBtn = document.getElementById('save-match-btn');
+
+      counter.textContent = `${filledCount}/10`;
+
+      if (hasDuplicates) {
+        badge.textContent = "중복 플레이어 감지";
+        badge.className = "px-space-xs py-0.5 rounded bg-error/20 text-error font-badge-label text-badge-label font-bold";
+        footerMsg.textContent = "주의: 한 경기 내에서 동일 플레이어가 중복 선택되었습니다. 다른 슬롯을 조정하십시오.";
+        footerMsg.className = "font-body-sm text-body-sm text-error font-bold";
+        saveBtn.disabled = true;
+        saveBtn.classList.add('opacity-50', 'pointer-events-none');
+      } else if (filledCount < 10) {
+        badge.textContent = "슬롯 미완성";
+        badge.className = "px-space-xs py-0.5 rounded bg-secondary/20 text-secondary font-badge-label text-badge-label";
+        footerMsg.textContent = `남은 ${10 - filledCount}개의 슬롯에 플레이어를 배정해주세요.`;
+        footerMsg.className = "font-body-sm text-body-sm text-on-surface-variant";
+        saveBtn.disabled = true;
+        saveBtn.classList.add('opacity-50', 'pointer-events-none');
+      } else {
+        badge.textContent = "중복 없음";
+        badge.className = "px-space-xs py-0.5 rounded bg-primary/20 text-primary font-badge-label text-badge-label font-bold";
+        footerMsg.textContent = "모든 10개 슬롯 검증 완료 (중복 없음). 저장이 가능합니다.";
+        footerMsg.className = "font-body-sm text-body-sm text-primary font-bold";
+        saveBtn.disabled = false;
+        saveBtn.classList.remove('opacity-50', 'pointer-events-none');
+      }
+    }
+
+    function setWinner(team) {
+      currentWinner = team;
+      const blueBtn = document.getElementById('winner-blue-btn');
+      const redBtn = document.getElementById('winner-red-btn');
+      const hint = document.getElementById('winner-hint');
+      const blueBadge = document.getElementById('blue-status-badge');
+      const redBadge = document.getElementById('red-status-badge');
+      const blueCard = document.getElementById('blue-card');
+      const redCard = document.getElementById('red-card');
+
+      if (team === 'blue') {
+        blueBtn.className = "relative flex items-center justify-center gap-space-xs py-space-sm rounded-lg bg-primary-container text-on-primary font-title-team text-body-md uppercase shadow-lg shadow-primary/20 transition-all cursor-pointer";
+        blueBtn.innerHTML = '<span class="material-symbols-outlined text-lg" style="font-variation-settings: \'FILL\' 1;">check_circle</span><span>BLUE 팀 승리</span>';
+
+        redBtn.className = "relative flex items-center justify-center gap-space-xs py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-title-team text-body-md uppercase transition-all cursor-pointer";
+        redBtn.innerHTML = '<span class="material-symbols-outlined text-lg opacity-40">flag</span><span>RED 팀 승리</span>';
+
+        hint.textContent = "BLUE 진영이 승리팀으로 설정되었습니다.";
+        hint.className = "font-body-sm text-body-sm text-primary";
+
+        blueBadge.textContent = "VICTORY";
+        blueBadge.className = "px-space-sm py-1 rounded bg-primary text-on-primary font-badge-label text-badge-label uppercase font-bold shadow-md";
+
+        redBadge.textContent = "DEFEAT";
+        redBadge.className = "px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant font-badge-label text-badge-label uppercase font-bold";
+
+        blueCard.classList.add('shadow-primary/20');
+        redCard.classList.remove('shadow-error/20');
+      } else {
+        redBtn.className = "relative flex items-center justify-center gap-space-xs py-space-sm rounded-lg bg-error text-on-error font-title-team text-body-md uppercase shadow-lg shadow-error/20 transition-all cursor-pointer";
+        redBtn.innerHTML = '<span class="material-symbols-outlined text-lg" style="font-variation-settings: \'FILL\' 1;">check_circle</span><span>RED 팀 승리</span>';
+
+        blueBtn.className = "relative flex items-center justify-center gap-space-xs py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-title-team text-body-md uppercase transition-all cursor-pointer";
+        blueBtn.innerHTML = '<span class="material-symbols-outlined text-lg opacity-40">flag</span><span>BLUE 팀 승리</span>';
+
+        hint.textContent = "RED 진영이 승리팀으로 설정되었습니다.";
+        hint.className = "font-body-sm text-body-sm text-error font-bold";
+
+        redBadge.textContent = "VICTORY";
+        redBadge.className = "px-space-sm py-1 rounded bg-error text-on-error font-badge-label text-badge-label uppercase font-bold shadow-md";
+
+        blueBadge.textContent = "DEFEAT";
+        blueBadge.className = "px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant font-badge-label text-badge-label uppercase font-bold";
+
+        redCard.classList.add('shadow-error/20');
+        blueCard.classList.remove('shadow-primary/20');
+      }
+    }
+
+    function adjustStake(amount) {
+      const stakeInput = document.getElementById('stake-input');
+      stakeInput.value = amount;
+      updatePoolDisplay();
+    }
+
+    function updatePoolDisplay() {
+      const stakeInput = document.getElementById('stake-input');
+      const val = parseInt(stakeInput.value || 0, 10);
+      const totalPool = val * 10;
+      document.getElementById('total-pool-display').textContent = '₩' + totalPool.toLocaleString();
+    }
+
+    document.getElementById('stake-input').addEventListener('input', updatePoolDisplay);
+
+    function resetForm() {
+      const defaults = ["P01", "P02", "P03", "P04", "P05", "P06", "P07", "P08", "P09", "P10"];
+      const keys = ["blue-1", "blue-2", "blue-3", "blue-4", "blue-5", "red-1", "red-2", "red-3", "red-4", "red-5"];
+      keys.forEach((k, idx) => {
+        slotSelections[k] = defaults[idx];
+      });
+      document.getElementById('stake-input').value = 10000;
+      document.getElementById('match-time-input').value = "2025-02-24 22:45";
+      setWinner('blue');
+      populateSelects();
+      updatePoolDisplay();
+    }
+
+    function saveMatch() {
+      const toast = document.getElementById('save-toast');
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-32', 'opacity-0');
+      }, 3500);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      populateSelects();
+      updatePoolDisplay();
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant py-space-lg"><div class="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-body-md text-on-surface font-semibold">내전<span class="text-primary">LOG</span></span><span class="text-on-surface-variant font-data-mono text-body-sm">© 2024 Scrim Telemetry System. All outcomes finalized.</span></div><div class="flex items-center gap-space-lg text-on-surface-variant font-data-mono text-body-sm"><span class="flex items-center gap-space-xs"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>LEAGUE REGULATION 5V5</span><span>SYSTEM ACTIVE</span></div></div></footer></body></html>
