@@ -14,8 +14,8 @@ function koreaNow() {
   return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}`;
 }
 
-export default function GameForm({ players, error }: { players: Player[]; error?: string }) {
-  const [roster, setRoster] = useState<Record<Team, string[]>>({ BLUE: [], RED: [] });
+export default function GameForm({ players, error, initialRoster }: { players: Player[]; error?: string; initialRoster?: Record<Team, string[]> }) {
+  const [roster, setRoster] = useState<Record<Team, string[]>>(initialRoster ?? { BLUE: [], RED: [] });
   const [winner, setWinner] = useState<Team>('BLUE');
   const [modalTeam, setModalTeam] = useState<Team | null>(null);
   const [search, setSearch] = useState('');
@@ -32,7 +32,7 @@ export default function GameForm({ players, error }: { players: Player[]; error?
   };
   const remove = (team: Team, playerId: string) => setRoster(current => ({ ...current, [team]: current[team].filter(id => id !== playerId) }));
   return <>
-    <div className="page-heading"><div><p className="eyebrow">● MATCH RECORD PROTOCOL / FLEXIBLE ROSTER</p><h1>신규 경기 전적 등록</h1><p>양 팀에 같은 인원을 배치하세요. 각 팀 1~5명까지 가능합니다.</p></div><div className="heading-stat">팀 인원 <strong>{roster.BLUE.length} : {roster.RED.length}</strong></div></div>
+    <div className="page-heading"><div><p className="eyebrow">● MATCH RECORD PROTOCOL / FLEXIBLE ROSTER</p><h1>신규 경기 전적 등록</h1><p>{initialRoster ? '사다리 결과의 팀 구성을 불러왔습니다. 경기 정보를 입력하세요.' : '양 팀에 같은 인원을 배치하세요. 각 팀 1~5명까지 가능합니다.'}</p></div><div className="heading-stat">팀 인원 <strong>{roster.BLUE.length} : {roster.RED.length}</strong></div></div>
     <form action={registerGame} className="game-entry-form">
       {error && <p className="error" role="alert">{error}</p>}
       <div className="game-settings">
