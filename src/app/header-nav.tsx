@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 const links = [
   { href: '/', label: '홈', icon: 'home' },
   { href: '/games', label: '게임 목록', icon: 'list' },
-  { href: '/games/new', label: '게임 전적 등록', icon: 'file' },
   { href: '/players/new', label: '플레이어 관리', icon: 'users' },
   { href: '/ladder', label: '사다리 타기', icon: 'ladder' },
 ] as const;
