@@ -2,7 +2,7 @@ import { db, requireDatabase } from './db';
 
 export type Team = 'BLUE' | 'RED';
 export type ParticipantInput = { playerId: string; team: Team; slot: number };
-export type Participant = { player_id: string; name: string; nickname: string | null; team: Team; slot: number };
+export type Participant = { player_id: string; name: string; nickname: string | null; team: Team; slot: number; streak: number };
 export type Game = { id: string; played_at: Date; winning_team: Team; stake: number; participants: Participant[] };
 
 export async function createGame(input: {
@@ -37,14 +37,26 @@ export async function createGame(input: {
 }
 
 const gameSelect = `
+  with player_results as (
+    select gp.player_id, gp.game_history_id, g.played_at, g.id,
+      (gp.team = g.winning_team) as won,
+      row_number() over (partition by gp.player_id order by g.played_at, g.id)
+        - row_number() over (partition by gp.player_id, (gp.team = g.winning_team) order by g.played_at, g.id) as streak_group
+    from game_participants gp join game_histories g on g.id = gp.game_history_id
+  ), player_streaks as (
+    select player_id, game_history_id,
+      row_number() over (partition by player_id, won, streak_group order by played_at, id)::int as streak
+    from player_results
+  )
   select g.id, g.played_at, g.winning_team, g.stake,
     coalesce(json_agg(json_build_object(
       'player_id', p.id, 'name', p.name, 'nickname', p.nickname,
-      'team', gp.team, 'slot', gp.slot
+      'team', gp.team, 'slot', gp.slot, 'streak', ps.streak
     ) order by gp.team, gp.slot) filter (where p.id is not null), '[]') as participants
   from game_histories g
   left join game_participants gp on gp.game_history_id = g.id
   left join players p on p.id = gp.player_id
+  left join player_streaks ps on ps.game_history_id = gp.game_history_id and ps.player_id = gp.player_id
 `;
 
 export async function getGames(filters: { query?: string; winner?: Team; limit?: number } = {}): Promise<Game[]> {

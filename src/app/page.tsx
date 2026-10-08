@@ -25,6 +25,6 @@ export default async function Home() {
       <p className="home-hero-tagline">We&apos;ve wasted {won(summary.total_stake)} and made absolutely no progress in life.</p>
     </section>
     <div className="section-heading"><div><p className="eyebrow">● MATCH HISTORY</p><h2>최근 경기 전적</h2></div><Link href="/games">전체 보기 →</Link></div>
-    {games.length ? <div className="match-list">{games.map(game => <GameCard game={game} compact key={game.id} />)}</div> : <div className="empty-state"><strong>아직 기록된 경기가 없습니다</strong><p>첫 경기를 등록하면 이곳에 표시됩니다.</p><Link href="/games/new">전적 등록하기 →</Link></div>}
+    {games.length ? <div className="match-list">{games.map(game => <GameCard game={game} key={game.id} />)}</div> : <div className="empty-state"><strong>아직 기록된 경기가 없습니다</strong><p>첫 경기를 등록하면 이곳에 표시됩니다.</p><Link href="/games/new">전적 등록하기 →</Link></div>}
   </>;
 }
