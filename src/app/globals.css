@@ -4,3 +4,39 @@
 @media(max-width:1100px){.header-kicker{display:none}.metric-grid{grid-template-columns:repeat(2,1fr)}.player-grid{grid-template-columns:1fr}.modal-player-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:750px){.header-inner{padding:13px 16px;flex-wrap:wrap;gap:12px}.header-nav{order:3;width:100%;overflow-x:auto;margin:0;gap:5px;padding-bottom:3px}.header-nav a{font-size:11px;padding:8px 10px;min-height:38px;gap:6px}.header-nav a svg{width:16px;height:16px}.header-cta{margin-left:auto;padding:10px}.container{padding:30px 16px 60px}.page-heading{align-items:start;flex-direction:column}.metric-grid,.quick-grid,.detail-grid,.detail-metrics,.player-layout,.entry-teams,.game-settings{grid-template-columns:1fr}.quick-grid{margin:20px 0 35px}.filter-bar{flex-wrap:wrap}.filter-bar input{flex-basis:100%}.match-teams{grid-template-columns:1fr;gap:24px}.match-vs{left:48%;top:-20px}.match-card-top{align-items:flex-start;flex-direction:column}.match-card{padding:15px}.match-top-right{width:100%;justify-content:space-between}.roster-line{display:flex}.detail-hero{align-items:start;flex-direction:column;padding:25px}.detail-metrics{padding:15px}.entry-note{flex-direction:column}.modal-player-grid{grid-template-columns:repeat(2,1fr)}.modal-search{flex-wrap:wrap}.modal-search span{white-space:normal}.site-footer{font-size:10px}.site-footer>span:last-child{display:none}}
 @media(max-width:460px){.metric-grid{gap:8px}.metric-card{padding:15px;min-height:145px}.metric-card>strong{font-size:25px}.modal-player-grid{grid-template-columns:1fr}.player-card-stats{flex-direction:column}.detail-team-list>div{gap:7px}.detail-team-list b{font-size:11px}}
+
+/* Compact cards on the home match feed. */
+.match-card.compact{padding:19px 22px;border-left-width:1px;border-radius:12px;background:#111824}
+.match-card.compact.blue-winner,.match-card.compact.red-winner{border-color:#2b3849}
+.match-card.compact .match-card-top{align-items:center;gap:14px}
+.match-card.compact .match-summary{display:flex;align-items:center;flex-wrap:wrap;gap:16px;min-width:0}
+.match-card.compact .match-id{display:inline;padding:0;border:0;background:none;color:#e9edf7;font-size:23px;font-weight:800;line-height:1}
+.match-card.compact .stake-chip{padding:0;border:0;background:none;color:#aebdcb;font-size:12px}
+.match-card.compact .stake-chip strong{color:#dbe5f0;font-size:13px}
+.match-card.compact .winner-chip{padding:0;border:0;border-radius:0;background:none;color:#dbe5f0;font-size:12px;letter-spacing:.02em}
+.match-detail-link{margin-left:auto;color:#ced8e6;font-size:12px;font-weight:700;white-space:nowrap}
+.match-detail-link:hover{color:var(--cyan)}
+.match-card.compact .match-teams{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;margin-top:17px;padding:17px 0 19px}
+.match-card.compact .match-team{min-height:112px;padding:14px 16px;border:1px solid #364354;border-radius:10px;background:#171e2a}
+.match-card.compact .match-team-wrap.blue.winner .match-team{border-color:#335d98;background:#101b2d}
+.match-card.compact .match-team-wrap.red.winner .match-team{border-color:#79505b;background:#241720}
+.match-card.compact .team-caption{margin-bottom:13px;padding-bottom:10px;border-bottom:1px solid #29405d;font-size:12px}
+.match-card.compact .match-team-wrap.red .team-caption{border-bottom-color:#49303d}
+.match-card.compact .team-caption.blue strong{color:#68aaff}
+.match-card.compact .team-caption.red strong{color:#f093a2}
+.match-card.compact .roster-line{display:flex;flex-wrap:wrap;gap:8px}
+.match-card.compact .roster-line span{display:inline-flex;align-items:center;gap:8px;max-width:100%;padding:8px 11px;border:1px solid #354152;border-radius:7px;background:#1b2533;color:#f0f4fb;font-size:15px;white-space:normal}
+.match-card.compact .roster-line small{margin:0;color:#79b4ff;font-size:11px}
+.match-card.compact .match-team-wrap.red .roster-line small{color:#f198a7}
+.match-card.compact .roster-line b{overflow-wrap:anywhere}
+.match-card.compact .match-vs{left:-40px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:28px;height:28px;border:1px solid #39475d;border-radius:50%;background:#101827;color:#dce5f1;font-size:10px}
+.match-card.compact .match-card-bottom{justify-content:flex-start;gap:20px;padding-top:13px;font-size:11px}
+.match-card.compact .match-card-bottom time{color:#c6d4e1}
+@media(max-width:750px){
+  .match-card.compact{padding:15px}
+  .match-card.compact .match-card-top{align-items:stretch}
+  .match-card.compact .match-summary{gap:7px}
+  .match-card.compact .match-teams{grid-template-columns:1fr;gap:22px}
+  .match-card.compact .match-vs{left:50%;top:-25px;transform:translateX(-50%)}
+  .match-card.compact .match-card-bottom{flex-direction:row;flex-wrap:wrap;gap:7px 16px}
+}
