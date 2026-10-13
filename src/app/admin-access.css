@@ -1,0 +1,32 @@
+.admin-login-trigger,
+.admin-footer-status button {
+  border: 0;
+  background: none;
+  color: #748294;
+  padding: 0;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.admin-login-trigger { margin-left: 12px; }
+.admin-login-trigger:hover,
+.admin-footer-status button:hover { color: var(--cyan); }
+.admin-login-trigger:focus-visible,
+.admin-footer-status button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.admin-footer-status { display: inline-flex; align-items: center; gap: 8px; margin-left: 12px; color: #748294; font-weight: 500; }
+.admin-footer-status button:disabled { opacity: .5; }
+
+.admin-login-backdrop { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px; background: #030813c9; }
+.admin-login-dialog { width: min(420px, 100%); padding: 24px; border: 1px solid #4d6774; border-radius: 12px; background: #1b2431; box-shadow: 0 24px 70px #000b; }
+.admin-login-title { display: flex; justify-content: space-between; align-items: start; }
+.admin-login-title h2 { margin: 0; font-size: 23px; }
+.admin-login-title > button { border: 0; background: none; color: #b8c6d5; font-size: 27px; line-height: 1; }
+.admin-login-dialog > p { color: #aebccd; font-size: 12px; line-height: 1.6; }
+.admin-login-dialog form { display: grid; gap: 10px; margin-top: 20px; }
+.admin-login-dialog label { font-size: 12px; font-weight: 700; }
+.admin-login-dialog input { width: 100%; padding: 12px; border: 1px solid #536478; border-radius: 6px; background: #0c1420; color: #f1f5fb; }
+.admin-login-dialog input:focus { outline: 2px solid var(--cyan); outline-offset: 1px; }
+.admin-login-error { color: #f49a9d; font-size: 12px; }
+.admin-login-dialog .button { margin-top: 6px; }
+.admin-login-dialog .button:disabled { opacity: .6; }

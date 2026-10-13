@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import type { Game, Team } from '@/lib/games';
 import { gameDate, won } from '@/lib/format';
+import DeleteGameButton from './delete-game-button';
 import './game-card.css';
 
-export default function GameCard({ game }: { game: Game }) {
+export default function GameCard({ game, canDelete = false }: { game: Game; canDelete?: boolean }) {
   return <article className={`match-card compact ${game.winning_team.toLowerCase()}-winner`}>
     <div className="match-card-top">
       <div className="match-summary"><Link href={`/games/${game.id}`} className="match-id">#{game.id}</Link><span className="stake-chip"> <strong>{won(game.stake)}</strong></span></div>
-      <Link className="match-detail-link" href={`/games/${game.id}`}>상세 정보 보기 <span aria-hidden="true">↗</span></Link>
+      <div className="match-card-actions"><Link className="match-detail-link" href={`/games/${game.id}`}>상세 정보 보기 <span aria-hidden="true">↗</span></Link>{canDelete && <DeleteGameButton gameId={game.id} />}</div>
     </div>
     <div className="match-teams">
       {(['BLUE', 'RED'] as Team[]).map((team, index) => <div className={`match-team-wrap ${team.toLowerCase()} ${game.winning_team === team ? 'winner' : ''}`} key={team}>

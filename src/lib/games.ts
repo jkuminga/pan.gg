@@ -92,3 +92,9 @@ export async function getGame(id: string): Promise<Game | null> {
     where g.id = $1 group by g.id`, [id]);
   return result.rows[0] ?? null;
 }
+
+export async function deleteGame(id: string): Promise<boolean> {
+  requireDatabase();
+  const result = await db.query('delete from game_histories where id = $1 returning id', [id]);
+  return result.rowCount === 1;
+}
