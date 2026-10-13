@@ -32,6 +32,13 @@ function signedWon(value: number | string) {
   return `${number > 0 ? '+' : number < 0 ? '-' : ''}${won(Math.abs(number))}`;
 }
 
+function chartDate(value: Date) {
+  return new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+  }).format(value);
+}
+
 function rate(wins: number, games: number) { return games ? (wins / games * 100).toFixed(1) : '0.0'; }
 
 function streakOf(matches: PlayerMatchResult[]) {
@@ -70,7 +77,21 @@ function ProfitChart({ matches }: { matches: PlayerMatchResult[] }) {
       <line x1="48" x2="728" y1={baseline} y2={baseline} className="stats-chart-zero" />
       <polygon points={area} fill="url(#stats-area)" />
       <polyline points={points} className="stats-chart-line" />
-      <circle cx={x(values.length - 1)} cy={y(values.at(-1)!)} r="5" className="stats-chart-dot" />
+      {matches.map((match, index) => {
+        const value = values[index + 1];
+        const label = `경기 #${match.id} · ${gameDate(match.played_at)} · 누적 손익 ${signedWon(value)}`;
+        const tooltipX = Math.min(Math.max(x(index + 1) - 83, 48), 562);
+        const tooltipY = y(value) < 80 ? y(value) + 18 : y(value) - 57;
+        return <g key={match.id} className="stats-chart-point" tabIndex={0} aria-label={label}>
+          <circle cx={x(index + 1)} cy={y(value)} r="16" className="stats-chart-hit" />
+          <circle cx={x(index + 1)} cy={y(value)} r={index === matches.length - 1 ? 5 : 3.5} className="stats-chart-dot" />
+          <g className="stats-chart-tooltip" transform={`translate(${tooltipX}, ${tooltipY})`}>
+            <rect width="166" height="47" rx="5" />
+            <text x="10" y="17">#{match.id} · {chartDate(match.played_at)}</text>
+            <text x="10" y="36">누적 손익 <tspan>{signedWon(value)}</tspan></text>
+          </g>
+        </g>;
+      })}
       <text x="41" y={Math.min(244, baseline + 4)} textAnchor="end" className="stats-chart-label">₩0</text>
     </svg>
     <div className="stats-chart-axis"><span>시작</span><span>{gameDate(matches[0].played_at)} → {gameDate(matches.at(-1)!.played_at)}</span><strong>{signedWon(values.at(-1)!)}</strong></div>
@@ -129,14 +150,20 @@ export default async function StatisticsPage({ searchParams }: { searchParams: P
 
     <section className="stats-individual" aria-labelledby="stats-individual-title">
       <div className="stats-section-heading"><div><p className="eyebrow">● PLAYER ANALYTICS</p><h2 id="stats-individual-title">플레이어별 상세 통계</h2><p>기간과 플레이어를 선택하면 지표·그래프·순위가 함께 바뀝니다.</p></div>
-        <div className="stats-controls"><div className="stats-periods" role="group" aria-label="조회 기간"><Link className={period === 'all' ? 'active' : ''} href={href({ period: null, from: null, to: null, page: null })}>전체 기간</Link><Link className={period === '30' ? 'active' : ''} href={href({ period: '30', from: null, to: null, page: null })}>최근 30일</Link></div>
-          {selected && <PlayerPicker selected={selected.name} options={players.map(player => ({ id: player.id, label: player.name, subtitle: player.nickname || `#${player.id}`, href: href({ player: player.id, page: null }) }))} />}
+        <div className="stats-control-stack">
+          <div className="stats-controls"><div className="stats-periods" role="group" aria-label="조회 기간"><Link className={period === 'all' ? 'active' : ''} href={href({ period: null, from: null, to: null, page: null })}>전체 기간</Link><Link className={period === '30' ? 'active' : ''} href={href({ period: '30', from: null, to: null, page: null })}>최근 30일</Link></div>
+            {selected && <PlayerPicker selected={selected.name} options={players.map(player => ({ id: player.id, label: player.name, subtitle: player.nickname || `#${player.id}`, href: href({ player: player.id, page: null }) }))} />}
+          </div>
+          <form className="stats-date-range" action="/statistics" method="get"><span>직접 기간 선택</span><input type="hidden" name="period" value="custom" />{selected && <input type="hidden" name="player" value={selected.id} />}<input type="hidden" name="sort" value={sort} /><label>시작일 <input type="date" name="from" defaultValue={from} /></label><label>종료일 <input type="date" name="to" defaultValue={to} /></label><button type="submit">적용</button>{period === 'custom' && <span className="stats-period-note">선택한 기간 적용 중</span>}</form>
         </div>
       </div>
-      <form className="stats-date-range" action="/statistics" method="get"><span>직접 기간 선택</span><input type="hidden" name="period" value="custom" />{selected && <input type="hidden" name="player" value={selected.id} />}<input type="hidden" name="sort" value={sort} /><label>시작일 <input type="date" name="from" defaultValue={from} /></label><label>종료일 <input type="date" name="to" defaultValue={to} /></label><button type="submit">적용</button>{period === 'custom' && <span className="stats-period-note">선택한 기간 적용 중</span>}</form>
 
       {selected ? <>
-        <div className="stats-player-banner"><div className="stats-player-identity"><span className="stats-avatar">{selected.name.slice(0, 1)}</span><div><p className="eyebrow">PLAYER #{selected.id}</p><h3>{selected.name}</h3><small>{selected.nickname || '닉네임 미지정'}</small></div></div><div className="stats-player-record"><strong>{selected.games}전 {selected.wins}승 {selected.losses}패</strong><span>승률 {rate(selected.wins, selected.games)}%</span><small>최근 경기 {selected.recent_game ? gameDate(selected.recent_game) : '없음'}</small></div><div className="stats-streak"><strong>{streak.label}</strong><small>선택 기간 최장 {streak.longest}연승</small></div></div>
+        <div className="stats-player-banner" aria-label={`${selected.name} 플레이어 개요`}>
+          <div className="stats-player-identity"><span className="stats-avatar">{selected.name.slice(0, 1)}</span><div><p className="eyebrow">PLAYER #{selected.id}</p><h3>{selected.name}</h3><small>{selected.nickname || '닉네임 미지정'}</small></div></div>
+          <div className="stats-player-record"><small>선택 기간 전적</small><strong>{selected.games}전 {selected.wins}승 {selected.losses}패</strong><span>승률 {rate(selected.wins, selected.games)}%</span></div>
+          <div className="stats-streak"><small>최근 경기</small><strong>{selected.recent_game ? gameDate(selected.recent_game) : '없음'}</strong><span>{streak.label}</span><small>선택 기간 최장 {streak.longest}연승</small></div>
+        </div>
         <div className="stats-player-metrics"><div className="stats-metric primary"><span>누적 순손익</span><strong className={Number(selected.net_amount) >= 0 ? 'stats-positive' : 'stats-negative'}>{signedWon(selected.net_amount)}</strong></div><div className="stats-metric"><span>총 획득액</span><strong className="stats-positive">{won(selected.gained_amount)}</strong></div><div className="stats-metric"><span>총 손실액</span><strong className="stats-negative">{won(selected.lost_amount)}</strong></div><div className="stats-metric"><span>누적 참가 판돈</span><strong>{won(selected.total_stake)}</strong></div></div>
         <div className="stats-analysis-grid"><section className="stats-panel"><div className="stats-panel-title"><div><p className="eyebrow">PROFIT / LOSS</p><h3>누적 손익 추이</h3></div><span>선택 기간 · {matches.length}경기</span></div><ProfitChart matches={matches} /></section><section className="stats-panel"><div className="stats-panel-title"><div><p className="eyebrow">SIDE SPLIT</p><h3>진영별 분석</h3></div></div><div className="stats-sides"><TeamPanel team="BLUE" games={selected.blue_games} wins={selected.blue_wins} net={selected.blue_net} /><TeamPanel team="RED" games={selected.red_games} wins={selected.red_wins} net={selected.red_net} /></div></section></div>
       </> : <div className="stats-empty">등록된 플레이어가 없습니다. <Link href="/players/new">플레이어 등록하기 →</Link></div>}
