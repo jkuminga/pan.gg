@@ -11,7 +11,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const loggedIn = await isAdmin();
   return <html lang="ko"><body>
     <header className="site-header"><div className="header-inner">
-      <Link className="brand" href="/" aria-label="Pan.gg 홈"><span className="brand-icon" aria-hidden="true" /><span>Pan<span className="accent">.gg</span></span></Link>
+      <Link className="brand" href="/" aria-label="Pan.gg 홈"><span className="brand-icon" aria-hidden="true" /><span>Pan<span className="accent">.gg</span>{loggedIn && <small className="brand-admin-label">ADMIN</small>}</span></Link>
       <HeaderNav />
       <Link className="button header-cta" href="/games/new"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>전적 등록</Link>
     </div></header>
